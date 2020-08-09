@@ -1,4 +1,3 @@
 *.mp4
 *.csv
-.pickle
-.md
+*.md
