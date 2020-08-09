@@ -18,6 +18,10 @@ import video_indexer_folder.video_indexing as vi       # for mining reddit
 app = Flask(__name__)
 CORS(app, support_credentials=True)
 
+@app.route('/trial', methods=['GET'])
+def trial():
+    return 'Hi'
+
 #  for twitter sentiment analysis
 @app.route('/keyword', methods=['POST'])
 def getTweetsOnKeyword():
