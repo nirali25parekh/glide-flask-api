@@ -3,9 +3,6 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS,cross_origin
 import json
 
-# TODO: uncomment this for twitter analysis1
-import twitter_folder.twitter_sentiment_analysis as tsa     # for twitter sentiment analysis
-
 # TODO: uncomment this for twitter analysis2
 import twitter_folder_2.twitter_analysis as ta     # for twitter sentiment analysis
 
