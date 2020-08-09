@@ -1,0 +1,16 @@
+# for flask apis
+config.py
+__pycache__/
+.vscode
+env/
+
+reddit_folder/__pycache__/
+reddit_folder/reddit_data.csv
+twitter_folder/__pycache__/
+twitter_folder/twitter_kaggle_data.csv
+twitter_folder_2/__pycache__/
+video_indexer_folder/__pycache__/
+video_indexer_folder/trial_videos/
+
+*.mp4
+*.csv
