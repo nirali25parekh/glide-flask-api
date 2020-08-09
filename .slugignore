@@ -1,4 +1,3 @@
 *.mp4
 *.csv
-video_indexer_folder/trial_videos/*.mp4
-reddit_folder/*.csv
+*.md
