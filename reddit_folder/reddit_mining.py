@@ -4,6 +4,7 @@ import praw
 import csv
 import datetime
 import pandas as pd
+import os
 
 def mine_reddit(sectors):
     sectorsArray = sectors.split(" ")

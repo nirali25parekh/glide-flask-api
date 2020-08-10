@@ -4,6 +4,7 @@ import pickle
 import string
 import json
 from textblob import TextBlob
+import os
 
 # twitter api
 auth = tweepy.OAuthHandler(os.environ.get('TWITTER_CONSUMER_KEY'), os.environ.get('TWITTER_CONSUMER_SECRET'))
