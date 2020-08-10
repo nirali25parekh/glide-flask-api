@@ -6,8 +6,8 @@ import os
 
 CONFIG = {
     'SUBSCRIPTION_KEY': os.environ.get('VI_SUBSCRIPTION_KEY'),
-    'LOCATION': os.environ.get(VI_LOCATION),
-    'ACCOUNT_ID': os.environ.get(VI_ACCOUNT_ID)
+    'LOCATION': os.environ.get('VI_LOCATION'),
+    'ACCOUNT_ID': os.environ.get('VI_ACCOUNT_ID')
 }
 
 vi = VideoIndexer(
