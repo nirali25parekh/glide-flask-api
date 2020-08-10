@@ -1,5 +1,5 @@
-# for flask apis
-config.py
+# for flask 
+.env
 __pycache__/
 .vscode
 env/

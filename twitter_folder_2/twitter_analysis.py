@@ -1,5 +1,4 @@
 import tweepy
-import config
 import re
 import pickle
 import string
@@ -7,8 +6,8 @@ import json
 from textblob import TextBlob
 
 # twitter api
-auth = tweepy.OAuthHandler(config.TWITTER_CONSUMER_KEY, config.TWITTER_CONSUMER_SECRET)
-auth.set_access_token(config.TWITTER_ACCESS_TOKEN,config.TWITTER_ACCESS_TOKEN_SECRET)
+auth = tweepy.OAuthHandler(os.environ.get('TWITTER_CONSUMER_KEY'), os.environ.get('TWITTER_CONSUMER_SECRET'))
+auth.set_access_token(os.environ.get('TWITTER_ACCESS_TOKEN'),os.environ.get('TWITTER_ACCESS_TOKEN_SECRET'))
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
 # test authentication

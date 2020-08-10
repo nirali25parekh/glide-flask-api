@@ -4,7 +4,6 @@ import praw
 import csv
 import datetime
 import pandas as pd
-import config
 
 def mine_reddit(sectors):
     sectorsArray = sectors.split(" ")
@@ -21,11 +20,11 @@ def mine_reddit(sectors):
 
     for i in range(5):
         try:
-            reddit = praw.Reddit(client_id=config.REDDIT_CLIENTID,
-                                client_secret=config.REDDIT_CLIENT_SECRET,
-                                password=config.REDDIT_PASSWORD,
-                                user_agent='Reddit search data extractor by /u/' + config.REDDIT_USERNAME + '',
-                                username=config.REDDIT_USERNAME)
+            reddit = praw.Reddit(client_id=os.environ.get('REDDIT_CLIENTID'),
+                                client_secret=os.environ.get('REDDIT_CLIENT_SECRET'),
+                                password=os.environ.get('REDDIT_PASSWORD'),
+                                user_agent='Reddit search data extractor by /u/' + os.environ.get('REDDIT_USERNAME') + '',
+                                username=os.environ.get('REDDIT_USERNAME'))
 
             print("Authentication for " + str(reddit.user.me()) + " is verified. Proceeding.\r\n")
 

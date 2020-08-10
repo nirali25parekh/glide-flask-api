@@ -2,21 +2,25 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS,cross_origin
 import json
+import os
 
 # TODO: uncomment this for twitter analysis2
-import twitter_folder_2.twitter_analysis as ta     # for twitter sentiment analysis
+# import twitter_folder_2.twitter_analysis as ta     # for twitter sentiment analysis
 
 # TODO: uncomment this for reddit mining
-import reddit_folder.reddit_mining as rm        # for mining reddit
+# import reddit_folder.reddit_mining as rm        # for mining reddit
 
 # TODO: uncomment this for video indexing
-import video_indexer_folder.video_indexing as vi       # for mining reddit
+# import video_indexer_folder.video_indexing as vi       # for mining reddit
 
 app = Flask(__name__)
+for i in os.environ.keys():
+    print('os ', i)
 CORS(app, support_credentials=True)
 
 @app.route('/trial', methods=['GET'])
 def trial():
+    print('----------',app.config)
     return 'Hi'
 
 #  for twitter sentiment analysis

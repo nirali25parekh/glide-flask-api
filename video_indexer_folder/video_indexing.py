@@ -2,12 +2,12 @@ from flask import Flask, request,jsonify
 from video_indexer import VideoIndexer
 import json as json
 from flask_cors import CORS,cross_origin
-import config
+import os
 
 CONFIG = {
-    'SUBSCRIPTION_KEY': config.VI_SUBSCRIPTION_KEY,
-    'LOCATION': config.VI_LOCATION,
-    'ACCOUNT_ID': config.VI_ACCOUNT_ID
+    'SUBSCRIPTION_KEY': os.environ.get('VI_SUBSCRIPTION_KEY'),
+    'LOCATION': os.environ.get(VI_LOCATION),
+    'ACCOUNT_ID': os.environ.get(VI_ACCOUNT_ID)
 }
 
 vi = VideoIndexer(
