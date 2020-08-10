@@ -15,7 +15,7 @@ import video_indexer_folder.video_indexing as vi       # for mining reddit
 
 app = Flask(__name__)
 for i in os.environ.keys():
-    print('os ', i)
+    print('config ', i)
 CORS(app, support_credentials=True)
 
 @app.route('/trial', methods=['GET'])

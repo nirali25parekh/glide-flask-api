@@ -12,5 +12,6 @@ twitter_folder_2/__pycache__/
 video_indexer_folder/__pycache__/
 video_indexer_folder/trial_videos/
 
+TODO.txt
 *.mp4
 *.csv
